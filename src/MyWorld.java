@@ -48,20 +48,13 @@ public class MyWorld {
       }
    }
    
+   /**
+    * Metodo que toma una bola y analiza los elementos en el mundo en ese momento para ver si hay colision con otra bola. 
+    * Compara si el elemento es una bola y no es la misma, para luego analizar si existe colision en ese momento entre ellas.
+    * @param me Bola a la cual se desea saber si hay colision
+    * @return null si no hay colision, o Bal b que es la bola con la cual se colisiona
+    */
    public Ball findCollidingBall(Ball me) {
-	   for(PhysicsElement e:elements){
-	  			 if(me.getId() != e.getId()){
-	  				 if(me.collide((Ball) e)){
-	  					 return (Ball)e;
-	  				 }		
-	  		 }
-
-		 }
-	return null;
-	   
-   }  
-
- /*  public Ball findCollidingBall(Ball me) {
 	   for (PhysicsElement e:elements) {
 		   if(me.getClass() == e.getClass() && me.getId() != e.getId()){
 			   Ball b = (Ball) e;
@@ -72,5 +65,5 @@ public class MyWorld {
 		   }
 	   }
 	   return null;
-   }  */
+   }
 } 
